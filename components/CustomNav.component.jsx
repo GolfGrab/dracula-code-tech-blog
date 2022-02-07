@@ -13,7 +13,7 @@ export default function CustomNav() {
               <a className="flex items-center py-5 px-2 text-pink-600">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="mr-1 h-6 w-6"
+                  className="mr-1 h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
