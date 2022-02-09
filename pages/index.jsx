@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import CustomNav from '../components/CustomNav.component'
+import Dracula from '../utils/images/Dracula'
 
 export default function Landing() {
   return (
@@ -24,8 +25,14 @@ export default function Landing() {
       >
         <CustomNav />
         <div className="flex h-screen items-center justify-center">
-          <div class="container mx-auto flex flex-col items-center">
-            <div class="mb-12 flex w-11/12 flex-col items-center justify-center text-center text-white">
+          {/* text and button */}
+          <div className="container mx-auto flex flex-col items-center">
+            <div
+              className="z-10 mb-12 flex w-11/12 flex-col items-center justify-center text-center text-white"
+              style={{
+                textShadow: '0px 0px 5px #000',
+              }}
+            >
               <h1 className="-mb-2 text-xl text-gray-400">Hello, I'm</h1>
               <h1 className="text-6xl text-gray-300">Surapus</h1>
               <h1 className="mt-2 mb-10 text-xl text-gray-400">
@@ -35,13 +42,25 @@ export default function Landing() {
               <h1 className=" text-6xl text-rose-500">Dracula Code</h1>
               <h1 className=" mt-2 text-3xl text-gray-300">Tech Blog</h1>
             </div>
-            <div class="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-8 md:space-y-0">
-              <button class="h-[4rem] w-[18rem] rounded border border-rose-800 bg-rose-800 px-10 py-4 text-2xl font-semibold  text-white transition duration-150 ease-in-out hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
+            <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-8 md:space-y-0">
+              <button className="h-[4rem] w-[18rem] rounded border border-rose-800 bg-rose-800 px-10 py-4 text-2xl font-semibold  text-white transition duration-150 ease-in-out hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
                 Continue To Blog
               </button>
-              <button class="h-[4rem] w-[18rem] rounded border border-rose-800 bg-transparent  text-2xl font-semibold text-rose-800 transition duration-150 ease-in-out  hover:border-rose-600 hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2 sm:px-10 ">
+              <button className="h-[4rem] w-[18rem] rounded border border-rose-800 bg-transparent  text-2xl font-semibold text-rose-800 transition duration-150 ease-in-out  hover:border-rose-600 hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2 sm:px-10 ">
                 See My Portfolio
               </button>
+            </div>
+            {/* images */}
+            <div
+              className="absolute   mt-[2rem] hidden md:block"
+              style={{
+                marginLeft: 'min(calc(50% - (100px / 2)),650px)',
+              }}
+            >
+              <Dracula height="20rem" />
+            </div>
+            <div className="-mb-10 mt-[2rem] block md:hidden">
+              <Dracula height="20vh" />
             </div>
           </div>
         </div>

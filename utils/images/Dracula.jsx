@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-const SVGComponent = (props) => (
+const Dracula = (props) => (
   <svg
     id="OBJECTS"
     xmlns="http://www.w3.org/2000/svg"
@@ -463,4 +463,4 @@ const SVGComponent = (props) => (
   </svg>
 )
 
-export default SVGComponent
+export default Dracula

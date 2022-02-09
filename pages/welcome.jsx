@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import CustomNav from '../components/CustomNav.component'
-import SVGComponent from '../components/svg'
+import SVGComponent from '../utils/images/Dracula'
 
 export default function Welcome() {
   return (
