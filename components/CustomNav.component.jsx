@@ -6,12 +6,12 @@ export default function CustomNav() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 flex h-20 items-center bg-transparent bg-black bg-opacity-25 text-2xl font-semibold text-gray-400 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0  z-30 flex h-20 items-center bg-transparent bg-black bg-opacity-25 text-2xl font-semibold text-gray-400 shadow-lg">
         <div className="min-h-20   mx-auto w-full justify-between sm:px-2 md:px-1 lg:px-8">
           <div className="flex justify-between ">
             <div className="flex space-x-4">
               {/* Logo and brand name */}
-              <Link href="#" passHref>
+              <Link href="/" passHref>
                 <a className="flex items-center py-5 px-2 text-rose-700 hover:text-rose-600">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ export default function CustomNav() {
               </Link>
               {/* primaryNav */}
               <div className="hidden items-center space-x-1 md:flex">
-                <Link href="#" passHref>
+                <Link href="/home" passHref>
                   <a className="py-5 px-3 hover:text-gray-200 hover:underline focus:underline">
                     Home
                   </a>
@@ -109,7 +109,7 @@ export default function CustomNav() {
         leaveTo="opacity-0 scale-95"
       >
         <div
-          className="fixed top-0 left-0 right-0 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-400 md:hidden "
+          className="fixed top-0 left-0 right-0 z-30 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-400 md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Link href="#" passHref>

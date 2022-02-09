@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import CustomNav from '../components/CustomNav.component'
 import Dracula from '../utils/images/Dracula'
 
@@ -43,12 +44,16 @@ export default function Landing() {
               <h1 className=" mt-2 text-3xl text-gray-300">Tech Blog</h1>
             </div>
             <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-8 md:space-y-0">
-              <button className="h-[4rem] w-[18rem] rounded border border-rose-800 bg-rose-800 px-10 py-4 text-2xl font-semibold  text-white transition duration-150 ease-in-out hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
-                Continue To Blog
-              </button>
-              <button className="h-[4rem] w-[18rem] rounded border border-rose-800 bg-transparent  text-2xl font-semibold text-rose-800 transition duration-150 ease-in-out  hover:border-rose-600 hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2 sm:px-10 ">
-                See My Portfolio
-              </button>
+              <Link href="/home">
+                <button className="h-[4rem] w-[17rem] rounded border border-rose-800 bg-rose-800 px-10 py-4 text-2xl font-semibold  text-white transition duration-150 ease-in-out hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
+                  Continue To Blog
+                </button>
+              </Link>
+              <Link href="#">
+                <button className="h-[4rem] w-[17rem] rounded border border-rose-800 bg-transparent  text-2xl font-semibold text-rose-800 transition duration-150 ease-in-out  hover:border-rose-600 hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2 sm:px-10 ">
+                  See My Portfolio
+                </button>
+              </Link>
             </div>
             {/* images */}
             <div
