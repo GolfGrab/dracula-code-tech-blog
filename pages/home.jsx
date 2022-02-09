@@ -1,7 +1,8 @@
+import React from 'react'
 import Head from 'next/head'
 import CustomNav from '../components/CustomNav.component'
 
-export default function Landing() {
+export default function Home() {
   return (
     <div>
       <Head>
