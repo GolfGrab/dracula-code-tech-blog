@@ -6,7 +6,7 @@ export default function CustomNav() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0  z-30 flex h-20 items-center bg-transparent bg-black bg-opacity-25 text-2xl font-semibold text-gray-400 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0  z-30 flex h-20 items-center bg-transparent bg-black bg-opacity-25 text-2xl font-semibold text-gray-400 shadow-lg backdrop-blur-sm">
         <div className="min-h-20   mx-auto w-full justify-between sm:px-2 md:px-1 lg:px-8">
           <div className="flex justify-between ">
             <div className="flex space-x-4">
@@ -101,15 +101,15 @@ export default function CustomNav() {
       {/* mobile menu */}
       <Transition
         show={isOpen}
-        enter="transition ease-out duration-100 transform"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="transition ease-in duration-75 transform"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
+        // enter="transition ease-out duration-100 transform"
+        // enterFrom="opacity-0 scale-95"
+        // enterTo="opacity-100 scale-100"
+        // leave="transition ease-in duration-75 transform"
+        // leaveFrom="opacity-100 scale-100"
+        // leaveTo="opacity-0 scale-95"
       >
         <div
-          className="fixed top-0 left-0 right-0 z-30 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-400 md:hidden"
+          className="fixed top-0 left-0 right-0 z-30 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-100 backdrop-blur-sm md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Link href="#" passHref>

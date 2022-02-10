@@ -18,11 +18,11 @@ const CategoryPost = ({ posts }) => {
         paddingTop: '6rem',
         marginBottom: '-2rem',
         backgroundColor: '#2f2f2f',
-        backgroundImage:
-          'url("https://images.unsplash.com/photo-1592991538534-00972b6f59ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80")',
+        backgroundImage: 'url(/keyboard-bg.jpg)',
         backgroundAttachment: 'fixed',
         backgroundRepeat: 'no-repeat',
         backgroundBlendMode: 'multiply',
+        backgroundSize: 'cover',
       }}
     >
       <CustomNav />
@@ -51,6 +51,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { posts },
+    revalidate: 600,
   }
 }
 

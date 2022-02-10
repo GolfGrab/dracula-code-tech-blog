@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import Carousel from 'react-multi-carousel'
 import 'react-multi-carousel/lib/styles.css'
 
@@ -24,17 +24,7 @@ const responsive = {
   },
 }
 
-const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([])
-  const [dataLoaded, setDataLoaded] = useState(false)
-
-  useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result)
-      setDataLoaded(true)
-    })
-  }, [])
-
+const FeaturedPosts = ({ featuredPosts }) => {
   const customLeftArrow = (
     <div className="arrow-btn absolute left-0 cursor-pointer rounded-full bg-pink-600 py-3 text-center">
       <svg
@@ -75,20 +65,32 @@ const FeaturedPosts = () => {
 
   return (
     <div className="mb-8">
-      <Carousel
-        infinite
-        customLeftArrow={customLeftArrow}
-        customRightArrow={customRightArrow}
-        responsive={responsive}
-        itemClass="px-4"
-      >
-        {dataLoaded &&
-          featuredPosts.map((post, index) => (
-            <FeaturedPostCard key={index} post={post} />
-          ))}
-      </Carousel>
+      {featuredPosts && (
+        <Carousel
+          infinite
+          customLeftArrow={customLeftArrow}
+          customRightArrow={customRightArrow}
+          responsive={responsive}
+          itemClass="px-4"
+        >
+          {featuredPosts &&
+            featuredPosts.map((post, index) => (
+              <FeaturedPostCard key={index} post={post} />
+            ))}
+        </Carousel>
+      )}
     </div>
   )
 }
 
 export default FeaturedPosts
+
+// Fetch data at build time
+export async function getStaticProps() {
+  const featuredPosts = await getFeaturedPosts()
+  console.log(featuredPosts)
+  return {
+    props: { featuredPosts } || [],
+    revalidate: 600,
+  }
+}
