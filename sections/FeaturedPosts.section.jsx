@@ -88,7 +88,7 @@ export default FeaturedPosts
 // Fetch data at build time
 export async function getStaticProps() {
   const featuredPosts = await getFeaturedPosts()
-  console.log(featuredPosts)
+  console.log('abccc', featuredPosts)
   return {
     props: { featuredPosts } || [],
     revalidate: 600,
