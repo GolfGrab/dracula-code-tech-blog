@@ -112,7 +112,7 @@ export default function CustomNav() {
           className="fixed top-0 left-0 right-0 z-30 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-100 backdrop-blur-sm md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <Link href="#" passHref>
+          <Link href="/home" passHref>
             <a className="mx-3 block px-4 py-2">Home</a>
           </Link>
           <Link href="#" passHref>
