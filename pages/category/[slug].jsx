@@ -23,6 +23,7 @@ const CategoryPost = ({ posts }) => {
         backgroundRepeat: 'no-repeat',
         backgroundBlendMode: 'multiply',
         backgroundSize: 'cover',
+        minHeight: '100vh',
       }}
     >
       <CustomNav />

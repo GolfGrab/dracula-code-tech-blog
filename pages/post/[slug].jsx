@@ -33,6 +33,7 @@ const PostDetails = ({ post }) => {
         backgroundRepeat: 'no-repeat',
         backgroundBlendMode: 'multiply',
         backgroundSize: 'cover',
+        minHeight: '100vh',
       }}
     >
       <CustomNav />

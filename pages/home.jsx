@@ -22,6 +22,7 @@ export default function Home({ posts }) {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundBlendMode: 'multiply',
+          minHeight: '100vh',
         }}
       >
         <CustomNav />
