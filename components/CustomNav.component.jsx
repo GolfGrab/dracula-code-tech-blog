@@ -6,13 +6,13 @@ export default function CustomNav() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0  z-30 flex h-20 items-center bg-transparent bg-black bg-opacity-25 text-2xl font-semibold text-gray-400 shadow-lg backdrop-blur-sm">
-        <div className="min-h-20   mx-auto w-full justify-between sm:px-2 md:px-1 lg:px-8">
+      <nav className="fixed top-0 left-0 right-0 z-30 flex items-center h-20 text-2xl font-semibold text-gray-400 bg-transparent bg-black bg-opacity-25 shadow-lg backdrop-blur-sm">
+        <div className="justify-between w-full mx-auto min-h-20 sm:px-2 md:px-1 lg:px-8">
           <div className="flex justify-between ">
             <div className="flex space-x-4">
               {/* Logo and brand name */}
               <Link href="/" passHref>
-                <a className="flex items-center py-5 px-2 text-rose-700 hover:text-rose-600">
+                <a className="flex items-center px-2 py-5 text-rose-700 hover:text-rose-600">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="mr-1 h-7 w-7"
@@ -31,38 +31,38 @@ export default function CustomNav() {
                 </a>
               </Link>
               {/* primaryNav */}
-              <div className="hidden items-center space-x-1 md:flex">
+              <div className="items-center hidden space-x-1 md:flex">
                 <Link href="/home" passHref>
-                  <a className="py-5 px-3 hover:text-gray-200 hover:underline focus:underline">
+                  <a className="px-3 py-5 hover:text-gray-200 hover:underline focus:underline">
                     Home
                   </a>
                 </Link>
                 <Link href="#" passHref>
-                  <a className="py-5 px-3 hover:text-gray-200 hover:underline focus:underline">
+                  <a className="px-3 py-5 hover:text-gray-200 hover:underline focus:underline">
                     Featured
                   </a>
                 </Link>
               </div>
             </div>
             {/* secondaryNav */}
-            <div className="hidden items-center space-x-1 md:flex">
-              <Link href="#" passHref>
-                <a className="py-5 px-3 hover:text-gray-200 hover:underline focus:underline">
+            <div className="items-center hidden space-x-1 md:flex">
+              <Link href="https://golf-grab.vercel.app" passHref>
+                <a className="px-3 py-5 hover:text-gray-200 hover:underline focus:underline">
                   My Portfolio
                 </a>
               </Link>
-              <Link href="#" passHref>
-                <a className="rounded  bg-rose-300 py-2 px-3 text-rose-900 hover:bg-rose-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
+              <Link href="https://golf-grab.vercel.app/#Contact" passHref>
+                <a className="px-3 py-2 rounded bg-rose-300 text-rose-900 hover:bg-rose-400 hover:text-black focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2">
                   Contact Me
                 </a>
               </Link>
             </div>
             {/* hamburger icon */}
-            <div className="mr-4 flex items-center px-1 md:hidden">
+            <div className="flex items-center px-1 mr-4 md:hidden">
               <button onClick={() => setIsOpen(!isOpen)}>
                 {!isOpen ? (
                   <svg
-                    className="block h-6 w-6"
+                    className="block w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ export default function CustomNav() {
                   </svg>
                 ) : (
                   <svg
-                    className="block h-6 w-6"
+                    className="block w-6 h-6"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -109,20 +109,20 @@ export default function CustomNav() {
         // leaveTo="opacity-0 scale-95"
       >
         <div
-          className="fixed top-0 left-0 right-0 z-30 mt-20 block rounded-b-lg bg-black bg-opacity-25 pb-3 text-lg font-semibold text-gray-100 backdrop-blur-sm md:hidden"
+          className="fixed top-0 left-0 right-0 z-30 block pb-3 mt-20 text-lg font-semibold text-gray-100 bg-black bg-opacity-25 rounded-b-lg backdrop-blur-sm md:hidden"
           onClick={() => setIsOpen(!isOpen)}
         >
           <Link href="/home" passHref>
-            <a className="mx-3 block px-4 py-2">Home</a>
+            <a className="block px-4 py-2 mx-3">Home</a>
           </Link>
           <Link href="#" passHref>
-            <a className="mx-3 block px-4 py-2">Featured</a>
+            <a className="block px-4 py-2 mx-3">Featured</a>
           </Link>
           <Link href="#" passHref>
-            <a className="mx-3 block px-4 py-2">My Portfolio</a>
+            <a className="block px-4 py-2 mx-3">My Portfolio</a>
           </Link>
           <Link href="#" passHref>
-            <a className="mx-3 block rounded-md bg-rose-300  px-4 py-2 text-rose-900">
+            <a className="block px-4 py-2 mx-3 rounded-md bg-rose-300 text-rose-900">
               Contact Me
             </a>
           </Link>

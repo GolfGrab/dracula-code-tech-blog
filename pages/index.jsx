@@ -11,7 +11,7 @@ export default function Landing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className=" h-screen "
+        className="h-screen "
         style={{
           backgroundColor: '#2f2f2f',
           // backgroundImage:
@@ -24,11 +24,11 @@ export default function Landing() {
         }}
       >
         <CustomNav />
-        <div className="flex h-screen items-center justify-center">
+        <div className="flex items-center justify-center h-screen">
           {/* text and button */}
-          <div className="container mx-auto flex flex-col items-center">
+          <div className="container flex flex-col items-center mx-auto">
             <div
-              className="z-10 mb-12 flex w-11/12 flex-col items-center justify-center text-center text-white"
+              className="z-10 flex flex-col items-center justify-center w-11/12 mb-12 text-center text-white"
               style={{
                 textShadow: '0px 0px 5px #000',
               }}
@@ -38,9 +38,9 @@ export default function Landing() {
               <h1 className="mt-2 mb-10 text-xl text-gray-400">
                 A Newbie Developer
               </h1>
-              <h1 className=" text-4xl text-rose-200">Welcome to my</h1>
-              <h1 className=" text-6xl text-rose-500">Dracula Code</h1>
-              <h1 className=" mt-2 text-3xl text-gray-300">Tech Blog</h1>
+              <h1 className="text-4xl text-rose-200">Welcome to my</h1>
+              <h1 className="text-6xl text-rose-500">Dracula Code</h1>
+              <h1 className="mt-2 text-3xl text-gray-300 ">Tech Blog</h1>
             </div>
             <div className="flex flex-col items-center justify-center space-y-5 md:flex-row md:space-x-8 md:space-y-0">
               <Link href="/home">
@@ -48,7 +48,7 @@ export default function Landing() {
                   Continue To Blog
                 </button>
               </Link>
-              <Link href="#">
+              <Link href="http://golf-grab.vercel.app">
                 <button className="h-[4rem] w-[17rem] rounded border border-rose-800 bg-transparent  text-2xl font-semibold text-rose-800 transition duration-150 ease-in-out  hover:border-rose-600 hover:text-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-700 focus:ring-offset-2 sm:px-10 ">
                   See My Portfolio
                 </button>
