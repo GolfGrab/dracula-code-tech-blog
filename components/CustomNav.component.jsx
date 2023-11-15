@@ -118,10 +118,10 @@ export default function CustomNav() {
           <Link href="#" passHref>
             <a className="block px-4 py-2 mx-3">Featured</a>
           </Link>
-          <Link href="#" passHref>
+          <Link href="https://golf-grab.vercel.app" passHref>
             <a className="block px-4 py-2 mx-3">My Portfolio</a>
           </Link>
-          <Link href="#" passHref>
+          <Link href="https://golf-grab.vercel.app/#Contact" passHref>
             <a className="block px-4 py-2 mx-3 rounded-md bg-rose-300 text-rose-900">
               Contact Me
             </a>
